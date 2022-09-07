@@ -59,28 +59,41 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  doormiddel van een screenreader heb ik geprobeerd door de website te navigeren. 
+  dit zijn de bevindingen:
+  - erg onduidelijk. Moeilijk navigeren omdat je heel goed geconcentreerd moet
+  luisteren wat er word gezegd.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  oplossingen:
+  - proberen het aantal links en knoppen te beperken op 1 pagina. 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  ik heb de website gebruikt door alleen een toetsenbord te gebruiken. ik heb geprobeerd verschillende onderdelen in de website te navigeren.
+  dit zijn de bevindingen:
+  - geselecteerde links kregen blauwe dunnen borders. die waren moeilijk te zien.
+  - sommige geselecteerde delen waren niet te zien. je weet niet waar je op staat.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  oplossingen:
+  - maak geselecteerde delen duidelijk zichtbaar (kleur, dikte)
+  - laat goed zien wat er geselecteerd is
 
+  #### Motoriek (shocks, elastiekjes)  
+  aan de hand van een apparaat aan de arm en een elastiek om de vinger helpt het je om een gebruiker te zijn met een motorieke beperking. Ik heb zo de website getest. 
+  dit zijn de bevindingen:
+  - kleine dingen zijn moeilijker te bedienen zoals radiobutton en checkboxen. Je klikt er makkelijk naast. 
 
-  #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  oplossing:
+  - maak knoppen/click area groter
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  ik heb de website getest met 3 verschillende brillen. de brillen helpen je om in te leven met iemand met een visuele beperking. hieruit komen de volgende bevindingen:
+  - sommige letters zijn niet goed te zien. 
+  - bestellen gaat moeilijk omdat het op dezelfde pagina in een small hokje word gedaan. 
+  
+  oplossingen:
+  - grote headers gebruiken
+  - bestellen op een aparte scherm weergeven. Dan heb je meer ruimte
+  - hoog contrast gebruiken
 </details>
 
 
