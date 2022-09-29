@@ -22,11 +22,11 @@ button, summary {
 	--color-white:rgb(255, 255, 255);
 	--color-orange: #ff6e0c;
 	--color-pink: #f20c90;
+	--color-purple: #5e32ba;
+	/* --color-pink: #5e32ba; */
 	--color-background: rgb(239, 239, 239);
+	/* transition: 1s; */
 }
-
-
-
 
 
 /****************/
@@ -39,6 +39,12 @@ body {
   color:var(--color-text);
   background-color:var(--color-background);
   margin: 0;
+  /* transition: 2s; */
+}
+
+*:focus {
+	/* border: black solid; */
+	outline:dotted 0.5em var(--color-purple);
 }
 
 ul {
@@ -49,11 +55,15 @@ ol, ul {
 	padding-left: 0;
 }
 
+main li, footer li {
+	margin-top: 1em;
+}
+
 a{
 	text-decoration: none;
 }
 
-h1, h2, h3, a {
+h2, h3, a, select, input {
 	font-family: omnes-pro,sans-serif;
 	font-weight: 900;
 	font-style: normal;
@@ -62,7 +72,7 @@ h1, h2, h3, a {
 	margin-top: 0;
 	margin-bottom: 0;
 	line-height: 1em;
-	margin-bottom: 0.3em;
+	/* margin-bottom: 0.3em; */
 }
 
 h2 {
@@ -77,7 +87,7 @@ p {
 	font-style: normal;
 }
 
-main a:last-child, footer nav a {
+main a:last-child, footer nav a, header div:last-child a {
 	display: block;
 	font-size: 1.2em;
 	border-radius: 3em;
@@ -87,10 +97,28 @@ main a:last-child, footer nav a {
 	padding: 0.9em 1.9em;
 }
 
+main > article {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 /* header */
+
+header > p {
+	background-color: var(--color-orange);
+	margin: 0;
+	height: 3em;
+	display: flex;
+	align-items: center;
+	padding: 1em;
+	color:var(--color-white);
+}
 
 nav{
 	margin-bottom: 1em;
+	background-color: var(--color-white);
+	padding: 0 1em;
+	/* transition: 2s; */
 }
 
 nav div {
@@ -98,16 +126,77 @@ nav div {
 	justify-content: space-between;
 }
 
-nav div > img{
+nav div h1 img{
 	width: 10em;
 }
 
-nav div a img {
-	width: 2em;
+nav div > a {
+	display: grid;
+	align-items: center;
 }
 
-nav ul {
-	/* display: none; */
+nav div > a span{
+	grid-row: 1;
+	grid-column: 1;
+	background-color: black;
+	color: black;
+	width: 2em;
+	height: 0.2em;
+	display: block;
+	transition: 1s;
+	/* margin-bottom: 1em; */
+}
+
+nav div > a span:first-child{
+	transform: translateY(0.4em);
+}
+
+nav div > a span:nth-child(3){
+	transform: translateY(-0.4em);
+}
+
+.menuOpen div > a span:first-child{
+	transform: rotate(45deg);
+}
+
+.menuOpen div > a span:nth-child(2){
+	display: none;
+}
+
+.menuOpen div > a span:nth-child(3){
+	transform: rotate(-45deg);
+}
+
+.menuOpen ul,
+nav ul:focus-within {
+	transform: translateY(0);
+}
+
+header nav ul {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 2.1em;
+
+	z-index: 2;
+	background-color: var(--color-white);
+	text-align: center;
+	font-size: 2.5em;
+	line-height: 2em;
+	margin-bottom: 0;
+	transform: translateY(100%);
+	transition: transform 700ms;
+}
+
+header div:last-child {
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1.2em 1em;
+	background-color: var(--color-background);
 }
 
 /* main */
@@ -118,7 +207,7 @@ main {
 
 /* We Love Coffee image */
 
-main > article:first-child {
+main > article:first-of-type {
 	background-image: url("../images/background_coffee.svg");
 	background-color: rgb(210, 184, 143);
 	background-size: cover;
@@ -129,15 +218,21 @@ main > article:first-child {
 	padding: 1em;
 }
 
-main > article:first-child img{
+main > article:first-of-type img{
 	width: 10em;
 	position: absolute;
 	display: block;
-	bottom: -9em;
+	/* bottom: -9em; */
+	bottom: -12em;
 }
 
+/* 80vw */
+/* main > article:first-of-type img:nth-of-type(1) {
+	left: 1em;
+} */
+
 /* https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element */
-main > article:first-child img:nth-of-type(2) {
+main > article:first-of-type img:nth-of-type(2) {
 	z-index: 1;
 	width: 11em;
 	margin-left: auto;
@@ -146,34 +241,43 @@ main > article:first-child img:nth-of-type(2) {
 	right: 0;
 }
 
-main > article:first-child img:nth-of-type(3) {
+main > article:first-of-type img:nth-of-type(3) {
 	right: 0;
 }
 
+.fadeCoffee img {
+	/* opacity: 0; */
+	animation-name: fade;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
 
-
+@keyframes fade {
+	0% {
+		opacity: 0;
+		bottom: -12em;
+	}
+	100% {
+		opacity: 1;
+		bottom: -9em
+	}
+}
 
 /* Bestel */
 
-main > article:nth-child(2) {
+main > article:nth-of-type(2) {
 	background-color: var(--color-pink);
 	border-radius: 1em;
 	padding: 1em;
 	color: var(--color-white);
 }
 
-main > article:nth-child(2) h2 {
-	/* text-align: center; */
-	/* margin-top: 0; */
-	/* margin-bottom: 0; */
-}
-
-main > article:nth-child(2) div {
+main > article:nth-of-type(2) div {
 	display: flex;
 	justify-content: space-evenly;
 }
 
-main > article:nth-child(2) div a {
+main > article:nth-of-type(2) div a {
 	padding: 0.5em 1em;
 	background-color: var(--color-white);
 	color: var(--color-pink);
@@ -183,16 +287,16 @@ main > article:nth-child(2) div a {
 
 /* Bestel Dunkin Online */
 
- main > article:nth-child(3) li {
+ main > article:nth-of-type(3) li {
 	background-color: white;
 	position: relative;
 	height: 7rem;
-	margin-top: 1rem;
+	/* margin-top: 1em; */
 	padding: 1em;
 	border-radius: 1em;
 }
 
- main > article:nth-child(3) img {
+ main > article:nth-of-type(3) img {
 	background-color: var(--color-pink);
 	border-radius: 50%;
 	padding: 0.9em;
@@ -200,53 +304,28 @@ main > article:nth-child(2) div a {
 	position: absolute;
 }
 
-main > article:nth-child(3) article{
+main > article:nth-of-type(3) article{
 	position: absolute;
-	right: 0;
-	width: 18em;
+	left: 6rem;
+	width: 15em;
 	text-align: left;
+
 }
 
-main > article:nth-child(3) article h3{
+main > article:nth-of-type(3) article h3{
 	text-align: left;
 } 
 
-/*
-ol li::marker {
-	font-family: omnes-pro,sans-serif;
-	font-weight: 900;
-	font-style: normal;
+main > article:nth-of-type(3) h2, section h2 {
+	color: var(--color-pink);
 }
 
-main > article:nth-child(3) ol li {
-	display: grid;
-	grid-template-columns: 5em 1fr;
-	grid-template-rows: 1fr 1fr;
+main > article:nth-of-type(3) h2 span, section h2 span {
+	color: var(--color-orange);
 }
-
-main > article:nth-child(3) ol li h3 {
-	grid-column: 2;
-	font-size: 1.5em;
-	margin-bottom: 0;
-}
-
-main > article:nth-child(3) ol li p {
-	margin-top: 0;
-} */
-
-/* main > article:nth-child(3) a {
-	display: block;
-	font-size: 1.2em;
-	border-radius: 3em;
-	text-align: center;
-	background-color: var(--color-orange);
-	color: var(--color-white);
-	padding: 0.9em 1.9em;
-} */
-
 
 /* app */
-main > article:nth-child(4) {
+main > article:nth-of-type(4) {
 	background-color: #71c5e8;
 	text-align: center;
 	position: relative;
@@ -256,30 +335,24 @@ main > article:nth-child(4) {
 	border-radius: 1em;
 }
 
-main > article:nth-child(4) h2 {
+main > article:nth-of-type(4) h2 {
 	padding: 0 0.4em;
 }
 
-main > article:nth-child(4) h3 {
+main > article:nth-of-type(4) h3 {
 	color: var(--color-white);
 }
 
-main > article:nth-child(4) p {
+main > article:nth-of-type(4) p {
 	color: var(--color-white);
 }
 
-/* main > article:nth-child(4) a {
-	background-color: transparent;
-	font-size: 1em;
-	padding: 0;
-} */
-
-main > article:nth-child(4) a img {
+main > article:nth-of-type(4) a img {
 	width: 15em;
 	margin: 0.5em 0.5em;
 }
 
-main > article:nth-child(4) > img {
+main > article:nth-of-type(4) > img {
 	position: absolute;
 	width: 55em;
 	left: -15em;
@@ -288,53 +361,47 @@ main > article:nth-child(4) > img {
 
 /* cloud cake */
 
-main > article:nth-child(5) {
-	/* position: relative; */
-	/* border: #111 solid; */
+main > article:nth-of-type(5) {
 	overflow: hidden;
-	/* padding: 1em; */
 	position: relative;
 }
 
-main > article:nth-child(5) h2 {
+main > article:nth-of-type(5) h2 {
 	margin-top: 1em;
 	font-size: 2em;
 	text-align: left;
 	color: var(--color-orange);
 }
 
-main > article:nth-child(5) p {
+main > article:nth-of-type(5) p {
 	color: #aaa;
 	font-size: 1.2em;
 }
 
-main > article:nth-child(5) img:first-child{
-	/* position: relative;
-	left: -5em; */
-	/* padding: 0 1em; */
+main > article:nth-of-type(5) img:first-child{
 	width: 100%;
 	border-radius: 2em;
 }
 
-main > article:nth-child(5) img:nth-child(2) {
+main > article:nth-of-type(5) img:nth-child(2) {
 	background-color: var(--color-pink);
 	border-radius: 50%;
 	padding: 1em;
 	width: 5.5em;
 	position: absolute;
 	right: 1em;
-	top: 21em;
+	top: 80vw;
 }
 
 /* blog posts */
 
-section div {
+main section div {
 	display: flex;
 	overflow: scroll;
 	gap: 1em;
 }
 
-section article {
+main section article {
 	border: rgba(170, 170, 170, 0.1) solid 3px;
 	padding: 1em;
 	display: flex;
@@ -346,7 +413,7 @@ section article {
 }
 
 /* all image border radius? */
-section img{
+main section img{
 	width: 19em;
 	border-radius: 1em;
 	text-align: center;
@@ -355,7 +422,7 @@ section img{
 }
 
 /* border radius veel gebruikt */
-section p {
+main section p {
 	background-color: var(--color-pink);
 	font-weight: 900;
 	color: var(--color-white);
@@ -364,12 +431,12 @@ section p {
 	border-radius: 2em;
 }
 
-section article:nth-of-type(odd) p {
+main section article:nth-of-type(odd) p {
 	background-color: var(--color-orange);
 }
 
 /* https://css-tricks.com/line-clampin/ */
-section h3 {
+main section h3 {
 	text-align: left;
 	text-transform: none;
 	height: 3em;
@@ -387,26 +454,26 @@ section h3 {
 /* store finder */
 
 /* padding op alle articles? */
-main > article:last-child{
+main > article:last-of-type{
 	text-align: center;
 	background-color: var(--color-pink);
 	border-radius: 1em;
 	padding: 1em;
 }
 
-main > article:last-child div{
+main > article:last-of-type div{
 	position: relative;
 	/* border: solid black; */
 }
 
-main > article:last-child img:nth-of-type(1) {
+main > article:last-of-type img:nth-of-type(1) {
 	width: 19em;
 	border-radius: 50%;
 	border: white solid 0.6em;
 }
 
 /* badge ook in footer */
-main > article:last-child img:nth-of-type(2) {
+main > article:last-of-type img:nth-of-type(2) {
 	position: absolute;
 	background-color: var(--color-white);
 	border-radius: 50%;
@@ -416,7 +483,7 @@ main > article:last-child img:nth-of-type(2) {
 	box-shadow: 0.1em 0.1em 1em rgb(167, 167, 167);
 }
 
-main > article:last-child p {
+main > article:last-of-type p {
 	color: white;
 	font-weight: 900;
 	font-size: 1.2em;
@@ -424,7 +491,7 @@ main > article:last-child p {
 	margin: 1em auto;
 }
 
-main > article:last-child a:last-child {
+main > article:last-of-type a:last-child {
 	background-color: var(--color-white);
 	color: var(--color-pink);
 	width: 12em;
@@ -434,12 +501,12 @@ main > article:last-child a:last-child {
 }
 
 footer {
-	/* background-color: var(--color-orange); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	position: relative;
 	margin-top: 5em;
+	margin-bottom: 6em;
 }
 
 footer nav {
@@ -447,6 +514,7 @@ footer nav {
 	padding-top: 7em;
 	padding-bottom: 4em;
 	width: 100%;
+	margin-bottom: 0;
 }
 
 footer nav ul {
@@ -470,7 +538,7 @@ footer > img {
 	top: -5em;
 }
 
-footer div {
+footer section {
 	position: absolute;
 	bottom: 1em;
 	display: flex;
@@ -478,7 +546,7 @@ footer div {
 	width: 50%;
 }
 
-footer div a {
+footer section a {
 	background-color: white;
 	border-radius: 100%;
 	padding: 0.9em;
@@ -487,10 +555,158 @@ footer div a {
 	overflow: hidden;
 }
 
-footer div img {
-	/* background-color: white;
-	border-radius: 100%;
-	padding: 0.9em;
-	width: 2.5em; */
+footer section img {
 	width: 1.5em;
+}
+
+nav section a {
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	overflow: hidden;
+}
+
+nav section {
+	display: flex;
+	justify-content: center;
+	align-items:flex-start;
+	gap: 1em;
+	/* border: black solid; */
+	border-radius: 4em 4em 0 0 ;
+	height: 3.5em;
+	width: 12em;
+	position: relative;
+	left: -1em;
+	background-color: var(--color-background);
+}
+
+nav section img {
+	width: 1em;
+}
+
+
+
+
+/* ******************* */
+/* 		 blog          */
+/* ******************* */
+form {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-pink);
+	padding: 1em;
+}
+
+form h2 {
+	margin: 1em;
+}
+
+form > *:not(h2) {
+	border-radius: 2em;
+	height: 3em;
+	border: white solid;
+	margin-top: 1em;
+	text-align: left;
+	padding-left: 1em;
+}
+
+/* https://commons.wikimedia.org/wiki/File:VisualEditor_-_Icon_-_Search-big_-_white.svg */
+form input:first-of-type {
+	background-color: transparent;
+	background-image: url("../images/search.png");
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+form input:first-of-type::placeholder {
+	color: white;
+}
+
+form select{
+	color: var(--color-pink);
+}
+
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* startje */
+		--color-text:#111;
+		--color-white:rgb(255, 255, 255);
+		--color-orange: #ff6e0c;
+		--color-pink: #f20c90;
+		--color-background: rgb(0, 0, 0);
+	}
+
+	main section h3 {
+		color: white;
+	}
+}
+
+/* Halloween thema */
+
+body.halloweenTheme, header.halloweenTheme nav {
+	background-color: black;
+}
+
+main.halloweenTheme > article:first-of-type {
+	background-color: #5e32ba;
+}
+
+main.halloweenTheme main > article:nth-of-type(4) {
+	background-color: #5e32ba;
+}
+
+main.halloweenTheme section h3 {
+	color: white;
+}
+
+.halloweenTheme nav div > a span {
+	background-color: white;
+}
+
+main > img:first-child {
+	display: none;
+}
+
+main.halloweenTheme > img:first-child {
+	width: 6em;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	transform: scaleX(-1) translateX(7em);
+	animation-name: ghostFly;
+	animation-duration: 9s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes ghostFly {
+	0% {
+		transform: scaleX(-1) translateX(5em);
+	}
+
+	10% {
+		transform: scaleX(-1) translate(-5em, -5em);
+	}
+	20% {
+		transform: scaleX(-1) translate(-7em, 6em);
+	}
+	30% {
+		transform: scaleX(-1) translate(-9em, 10em);
+	}
+	40% {
+		transform: scaleX(-1) translate(-12em, -5em);
+	}
+	50% {
+		transform: scaleX(-1) translate(-18em, 9em);
+	}
+	60% {
+		transform: translate(18em, 9em) scaleX(1);
+	}
+	70% {
+		transform: scaleX(1) translate(7em, -6em);
+	}
+	100% {
+		transform: scaleX(1) translate(-5em, 5em);
+	}
 }

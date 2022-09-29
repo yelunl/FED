@@ -104,10 +104,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown_1.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
@@ -125,25 +125,33 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  breakdown schets gemaakt. Ik weet nu hoe het er eruit moet komen te zien. Weet alleen niet zeker of ik de juiste HTML tags op de juiste plekken heb gebruikt. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | yeliz      | anouk          | katarina    | student 4        |
+  | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
+Yeliz: 
+1) Zijn de juiste article en section tags gebruikt?
+2) waar moet de fixed element komen?
 
+Anouk: 
+1) 
+
+Katarina: 
+1) Wat is de h1 element op mijn pagina?
+2) Hoe stijl ik een bepaalde element op mijn pagina?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - logo van website is de h1
-  - stappen plan is een ordered list
-  - nog een punt
-  - ...
+  - aantal tags waren niet goed gebruikt. Die heb ik verbeterd
+  - gebruik ordered list tag bij de stappen
+  - h1 is de naam van de website
 
 </details>
 
@@ -158,28 +166,39 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  achtergrond met witte golven op de achtergrond van de website is me niet gelukt om na te maken. 
+  <img src="readme-images/golven_achtergrond_1.jpg" width="375px" alt="golven achtergrond">
+  <img src="readme-images/golven_achtergrond_2.jpg" width="375px" alt="golven achtergrond">
 
+  ik had moeite met het stijlen/positioneren van de stappen op de website. Ik had hiervoor de hulp ingeschakeld van de studentenassistenten.
+  <img src="readme-images/stappen.png" width="375px" alt="stappenplan hoe bestellen">
+  
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | yeliz      | anouk          | katarina    | student 4        |
+  | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            |                 | ...          | ...              |
+  | ...            | ...                | ...          | ...              |
+Yeliz: 
+1) zijn de juiste tags gebruikt?
+2) hoe krijg je position absolute responsive?
 
-Yeliz:  hoe position absolute responsive maken?
-        zijn de juiste html tags gebruikt?
-Anouk:  hoe moet je 2e pagina met css stijlen?
+Anouk: 
+1) hoe kan ik het beste css gebruiken met 2 pagina's?
+
+Katarina: 
+1) mag je 2 HTML documenten hebben of moet je alles in 1 document zetten?
+2) Hoe kan ik een menu icoontje responsive maken?
+3) Hoe kan ik blokjes naast de afbeeldingen krijgen bij responsivness?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - aantal tags stonden verkeerd. section voor social media iconen gebruiken. 
+  - begin lijst van de surface plane zoals dark modus en audio
 
 </details>
 
@@ -197,27 +216,40 @@ Anouk:  hoe moet je 2e pagina met css stijlen?
 
   #### Screenreader
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  ik heb een screenreader gebruikt op mijn website. alles werd voorgelezen. merkte dat de navigatie op de achtergrond word voorgelezen zonder dat het op beeld kwam.
+  bevindingen: 
+  - navigatie word voorgelezen terwijl die niet open staat.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  oplossingen:
+  - gebruik :focus-within
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  bevindingen: 
+  - je ziet waar je op staat door paarse border
+  - navigatie word geselecteerd zonder dat het open staat.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  oplossingen:
+  - gebruik :focus-within
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  bevindingen: 
+  elastiek
+  shocks
+  - scrollen gaat moeilijk het drukken op knoppen gaat wel makkelijk wanneer de knoppen groot genoeg zijn. 
+  
+  oplossingen: 
+  - maak knoppen groter
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  <!-- Hier korte omschrijving (met indien nodig afbeeldingen) -->
+  verschillende kleuren zijn op de website nog goed leesbaar. Alleen het bezorgen en afhalen button kan iets groter gemaakt worden voor mensen met blurred vision.
 
+  - knoppen bezorgen en afhalen zijn moeilijker leesbaar. 
+  - paragraaf tekst is moeilijk leesbaar bij dark mode. grijs en zwart zit te weinig contrast. 
+  
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  - knoppen bezorgen en afhalen groter maken. 
+  - tekst veranderen naar wit bij dark mode
 </details>
 
 
@@ -230,8 +262,8 @@ Anouk:  hoe moet je 2e pagina met css stijlen?
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  <!-- hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code) -->
+  animeren was best lastig. vooral de navigatie menu en het laten bewegen van de spook. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -241,15 +273,17 @@ Anouk:  hoe moet je 2e pagina met css stijlen?
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
+  
+  Yeliz: 
+  1) moet je bij een search ook de form tags gebruiken?
+  2) staat de animatie op de juiste plek?
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Form moet een label hebben en het liefst een submit button dan leest screenreader de labels voor.
+  - animatie is niet belangrijkste in de html. Het kan onderaan de pagina of hou de alt atribuut leeg.
 
 </details>
 
@@ -267,15 +301,19 @@ Anouk:  hoe moet je 2e pagina met css stijlen?
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  <!-- Korte omschrijving met plaatjes -->
+  spelen van audio met javascript en het maken van een spook animatie. 
+  thema toepassen.
+  Begrijp ook beter wanneer je welke html elmenten moet gebruiken.
+  veel geleerd over positions.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
-
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+
 </details>
 
 
@@ -289,8 +327,9 @@ Anouk:  hoe moet je 2e pagina met css stijlen?
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. How to play audio? (2012, 23 februari). Stack Overflow. Geraadpleegd op 27 september 2022, van https://stackoverflow.com/questions/9419263/how-to-play-audio 
+  2. Element.getAttribute() - Web APIs | MDN. (2022, 19 september). Geraadpleegd op 27 september 2022, van https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute
+  3. Coyier, C. (2021, 2 oktober). Line Clampin' (Truncating Multiple Line Text). CSS-Tricks. Geraadpleegd op 27 september 2022, van https://css-tricks.com/line-clampin/
+  4. Codepen (z.d.). Geraadpleegd op 27 september 2022, van https://codepen.io/yelunl123/pen/mdLBZBg
 
 </details>
