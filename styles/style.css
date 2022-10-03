@@ -202,7 +202,7 @@ main {
 
 /* We Love Coffee */
 
-main > article:first-of-type {
+main>article:first-of-type {
 	background-image: url("../images/background_coffee.svg");
 	background-color: rgb(210, 184, 143);
 	background-size: cover;
@@ -213,15 +213,15 @@ main > article:first-of-type {
 	padding: 1em;
 }
 
-main > article:first-of-type img {
+main>article:first-of-type img {
 	width: 10em;
 	position: absolute;
 	display: block;
 	bottom: -12em;
 }
 
-/* https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element */
-main > article:first-of-type img:nth-of-type(2) {
+/* How to center a “position: absolute” element. (2011, 14 december). Stack Overflow. Geraadpleegd op 3 oktober 2022, van https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element */
+main>article:first-of-type img:nth-of-type(2) {
 	z-index: 1;
 	width: 11em;
 	margin-left: auto;
@@ -230,11 +230,11 @@ main > article:first-of-type img:nth-of-type(2) {
 	right: 0;
 }
 
-main > article:first-of-type img:nth-of-type(3) {
+main>article:first-of-type img:nth-of-type(3) {
 	right: 0;
 }
 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode */
+/* animation-fill-mode - CSS: Cascading Style Sheets | MDN. (2022, 27 september). Geraadpleegd op 3 oktober 2022, van https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode */
 .fadeCoffee img {
 	animation-name: fade;
 	animation-duration: 1s;
@@ -256,19 +256,19 @@ main > article:first-of-type img:nth-of-type(3) {
 
 /* Bestel */
 
-main > article:nth-of-type(2) {
+main>article:nth-of-type(2) {
 	background-color: var(--color-pink);
 	border-radius: 1em;
 	padding: 1em;
 	color: var(--color-white);
 }
 
-main > article:nth-of-type(2) div {
+main>article:nth-of-type(2) div {
 	display: flex;
 	justify-content: space-evenly;
 }
 
-main > article:nth-of-type(2) div a {
+main>article:nth-of-type(2) div a {
 	padding: 0.5em 1em;
 	background-color: var(--color-white);
 	color: var(--color-pink);
@@ -278,11 +278,11 @@ main > article:nth-of-type(2) div a {
 
 /* Bestel Dunkin Online */
 
-main > article:nth-of-type(3) {
+main>article:nth-of-type(3) {
 	padding: 0;
 }
 
-main > article:nth-of-type(3) li {
+main>article:nth-of-type(3) li {
 	background-color: white;
 	position: relative;
 	height: 7rem;
@@ -290,7 +290,7 @@ main > article:nth-of-type(3) li {
 	border-radius: 1em;
 }
 
-main > article:nth-of-type(3) img {
+main>article:nth-of-type(3) img {
 	background-color: var(--color-pink);
 	border-radius: 50%;
 	padding: 0.9em;
@@ -298,31 +298,30 @@ main > article:nth-of-type(3) img {
 	position: absolute;
 }
 
-main > article:nth-of-type(3) article {
+main>article:nth-of-type(3) article {
 	position: absolute;
 	left: 6rem;
 	width: 15em;
 	text-align: left;
-
 }
 
-main > article:nth-of-type(3) article h3 {
+main>article:nth-of-type(3) article h3 {
 	text-align: left;
 }
 
-main > article:nth-of-type(3) h2,
+main>article:nth-of-type(3) h2,
 section h2 {
 	color: var(--color-pink);
 }
 
-main > article:nth-of-type(3) h2 span,
+main>article:nth-of-type(3) h2 span,
 section h2 span {
 	color: var(--color-orange);
 }
 
 /* app */
 
-main > article:nth-of-type(4) {
+main>article:nth-of-type(4) {
 	background-color: #71c5e8;
 	text-align: center;
 	position: relative;
@@ -332,24 +331,24 @@ main > article:nth-of-type(4) {
 	border-radius: 1em;
 }
 
-main > article:nth-of-type(4) h2 {
+main>article:nth-of-type(4) h2 {
 	padding: 0 0.4em;
 }
 
-main > article:nth-of-type(4) h3 {
+main>article:nth-of-type(4) h3 {
 	color: var(--color-white);
 }
 
-main > article:nth-of-type(4) p {
+main>article:nth-of-type(4) p {
 	color: var(--color-white);
 }
 
-main > article:nth-of-type(4) a img {
+main>article:nth-of-type(4) a img {
 	width: 15em;
 	margin: 0.5em 0.5em;
 }
 
-main > article:nth-of-type(4)>img {
+main>article:nth-of-type(4)>img {
 	position: absolute;
 	width: 55em;
 	left: -15em;
@@ -358,30 +357,30 @@ main > article:nth-of-type(4)>img {
 
 /* cloud cake */
 
-main > article:nth-of-type(5) {
+main>article:nth-of-type(5) {
 	overflow: hidden;
 	position: relative;
 	padding: 0;
 }
 
-main > article:nth-of-type(5) h2 {
+main>article:nth-of-type(5) h2 {
 	margin-top: 1em;
 	font-size: 2em;
 	text-align: left;
 	color: var(--color-orange);
 }
 
-main > article:nth-of-type(5) p {
+main>article:nth-of-type(5) p {
 	font-size: 1.2em;
 	color: var(--color-text);
 }
 
-main > article:nth-of-type(5) img:first-child {
+main>article:nth-of-type(5) img:first-child {
 	width: 100%;
 	border-radius: 2em;
 }
 
-main > article:nth-of-type(5) img:nth-child(2) {
+main>article:nth-of-type(5) img:nth-child(2) {
 	background-color: var(--color-pink);
 	border-radius: 50%;
 	padding: 1em;
@@ -433,7 +432,7 @@ main section article:nth-of-type(odd) p {
 	background-color: var(--color-orange);
 }
 
-/* https://css-tricks.com/line-clampin/ */
+/* Coyier, C. (2021, 2 oktober). Line Clampin' (Truncating Multiple Line Text). CSS-Tricks. Geraadpleegd op 27 september 2022, van https://css-tricks.com/line-clampin/ */
 main section h3 {
 	text-align: left;
 	text-transform: none;
@@ -448,24 +447,24 @@ main section h3 {
 }
 
 /* store finder */
-main > article:last-of-type {
+main>article:last-of-type {
 	text-align: center;
 	background-color: var(--color-pink);
 	border-radius: 1em;
 	padding: 1em;
 }
 
-main > article:last-of-type div {
+main>article:last-of-type div {
 	position: relative;
 }
 
-main > article:last-of-type img:nth-of-type(1) {
+main>article:last-of-type img:nth-of-type(1) {
 	width: 19em;
 	border-radius: 50%;
 	border: white solid 0.6em;
 }
 
-main > article:last-of-type img:nth-of-type(2),
+main>article:last-of-type img:nth-of-type(2),
 footer>img {
 	position: absolute;
 	background-color: var(--color-white);
@@ -476,7 +475,7 @@ footer>img {
 	box-shadow: 0.1em 0.1em 1em rgb(167, 167, 167);
 }
 
-main > article:last-of-type p {
+main>article:last-of-type p {
 	color: white;
 	font-weight: 900;
 	font-size: 1.2em;
@@ -484,7 +483,7 @@ main > article:last-of-type p {
 	margin: 1em auto;
 }
 
-main > article:last-of-type a:last-child {
+main>article:last-of-type a:last-child {
 	background-color: var(--color-white);
 	color: var(--color-pink);
 	width: 12em;
@@ -580,7 +579,7 @@ select {
 	padding-left: 1em;
 }
 
-/* https://commons.wikimedia.org/wiki/File:VisualEditor_-_Icon_-_Search-big_-_white.svg */
+/* VisualEditor team. (2014, 15 augustus). [White icon for searching]. wikimedia. https://commons.wikimedia.org/wiki/File:VisualEditor_-_Icon_-_Search-big_-_white.svg */
 form input:first-of-type {
 	background-color: transparent;
 	background-image: url("../images/search.png");
@@ -620,6 +619,7 @@ main>section:nth-child(3) article {
 		--color-pink: #f20c90;
 		--color-background: rgb(0, 0, 0);
 	}
+
 	main section h3 {
 		color: white;
 	}
@@ -631,8 +631,8 @@ header.halloweenTheme nav {
 	background-color: black;
 }
 
-main.halloweenTheme > article:first-of-type,
-main.halloweenTheme main > article:nth-of-type(4) {
+main.halloweenTheme>article:first-of-type,
+main.halloweenTheme main>article:nth-of-type(4) {
 	background-color: #5e32ba;
 }
 

@@ -161,13 +161,12 @@ Katarina:
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
   achtergrond met witte golven op de achtergrond van de website is me niet gelukt om na te maken. 
   <img src="readme-images/golven_achtergrond_1.jpg" width="375px" alt="golven achtergrond">
   <img src="readme-images/golven_achtergrond_2.jpg" width="375px" alt="golven achtergrond">
 
   ik had moeite met het stijlen/positioneren van de stappen op de website. Ik had hiervoor de hulp ingeschakeld van de studentenassistenten.
-  <img src="readme-images/stappen.png" width="375px" alt="stappenplan hoe bestellen">
+  <img src="readme-images/stappen.png" width="360px" alt="stappenplan hoe bestellen">
   
 
   ### Agenda voor meeting
@@ -188,6 +187,7 @@ Katarina:
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - aantal tags stonden verkeerd. gebruik section voor social media iconen ipv div. 
+  - gebruik vw bij position absolute
   - begin lijst van de surface plane zoals dark modus en audio
 
 </details>
@@ -250,7 +250,7 @@ Katarina:
 
   Yeliz:
   1) moet je bij een search ook de form tags gebruiken?
-  2) staat de animatie op de juiste plek?
+  2) staat de animatie op de juiste plek in de html?
 
   Anouk:
   1) wat houd toegankelijkheid ++ in?
@@ -262,7 +262,7 @@ Katarina:
 
   ### Verslag van meeting
 
-  - Form moet een label hebben en het liefst een submit button dan leest screenreader de labels voor.
+  - Form moet een label hebben dan leest screenreader de labels voor en het liefst een submit button
   - animatie is niet belangrijkste in de html. Het kan onderaan de pagina of hou de alt atribuut leeg
 
 
