@@ -137,6 +137,7 @@ Yeliz:
 2) waar moet de fixed element in de html komen?
 
 Anouk:
+1) hoe kan ik het beste css gebruiken met 2 pagina's?
 
 Katarina: 
 1) Wat is de h1 element op mijn pagina?
