@@ -263,7 +263,7 @@ Katarina:
   ### Verslag van meeting
 
   - Form moet een label hebben dan leest screenreader de labels voor en het liefst een submit button
-  - animatie is niet belangrijkste in de html. Het kan onderaan de pagina of hou de alt atribuut leeg
+  - animatie is niet belangrijkste in de html. Het kan onderaan de pagina of hou de alt attribuut leeg
 
 
 </details>
