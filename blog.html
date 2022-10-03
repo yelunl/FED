@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,9 +37,10 @@
     <main>
         <img src="./images/ghost.webp" alt="ghost animation">
         <form>
-            <!-- label toevoegen en submit -->
             <h2>dd blogs</h2>
-            <input name="search" type="search" placeholder="zoeken...">
+            <label for="search">search</label>
+            <input name="search" type="search" id="search" placeholder="zoeken...">
+            <label for="blog">categorieën</label>
             <select name="blog" id="blog">
               <option value="categorieën">categorieën</option>
               <option value="nieuw">nieuw</option>
@@ -47,6 +48,7 @@
               <option value="winkels">winkels</option>
               <option value="business">business</option>
             </select>
+            <label for="datum">datum</label>
             <select name="datum" id="datum">
                 <option value="datum">datum</option>
                 <option value="2022">2022</option>
@@ -54,21 +56,22 @@
                 <option value="2020">2020</option>
                 <option value="2019">2019</option>
               </select>
+              <input type="submit">
           </form>
           <section>
             <article>
-                <img src="./images/article_1.png" alt="">
+                <img src="./images/article_1.png" alt="donut in doos">
                 <p>vegan</p>
                 <h3>Oproep aan alle vegans out there: Donut worry, we got you covered!</h3>
             </article>
             <article>
-                <img src="./images/article_2.png" alt="">
+                <img src="./images/article_2.png" alt="donut cloud cake">
                 <p>nieuw</p>
                 <h3>Dunkin'Cloud Cakes! Het is heerlijk luchtig, heeft 8 verschillende smaken en is eind deze maand
                     beschikbaar in Nederland en België!</h3>
             </article>
             <article>
-                <img src="./images/article_3.png" alt="">
+                <img src="./images/article_3.png" alt="donut">
                 <p>winkels</p>
                 <h3>Vestiging Dunkin’ Donuts opent aan het Spui in Den Haag: Bel ons voor gratis donuts!</h3>
             </article>
@@ -80,7 +83,7 @@
 			<ul>
 				<li><a href="#">storefinder</a></li>
 				<li><a href="#">jobs</a></li>
-				<li><a href="#">blog</a></li>
+				<li><a href="./blog.html">blog</a></li>
 				<li><a href="#">over dunkin</a></li>
 				<li><a href="#">halloween thema</a></li>
 			</ul>

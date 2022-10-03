@@ -1,10 +1,8 @@
-// JavaScript Document
 var navigatie = document.querySelector("header nav");
 var menuButton = document.querySelector("nav div > a");
 var menuItems = document.querySelector("header nav ul");
 
 var coffeeImage = document.querySelector("main > article:first-of-type");
-console.log(coffeeImage);
 
 var halloweenButton = document.querySelector("footer nav ul li:last-child");
 var halloweenImage = document.querySelector("header nav img");
@@ -36,11 +34,9 @@ function halloweenTheme() {
     main.classList.toggle("halloweenTheme");
 }
 
-
 halloweenButton.addEventListener('click', halloweenTheme);
 menuButton.addEventListener('click', menuOpen);
 
 window.addEventListener('load', function() {
     coffeeImage.classList.add("fadeCoffee");
-    console.log('hello');
 })
