@@ -138,6 +138,7 @@ Yeliz:
 
 Anouk:
 1) hoe kan ik het beste css gebruiken met 2 pagina's?
+2) moet het naast de surface plane ook responsive zijn?
 
 Katarina: 
 1) Wat is de h1 element op mijn pagina?
@@ -187,7 +188,7 @@ Katarina:
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - aantal tags stonden verkeerd. gebruik section voor social media iconen ipv div. 
-  - gebruik vw bij position absolute
+  - gebruik vw of em bij position absolute
   - begin lijst van de surface plane zoals dark modus en audio
 
 </details>
