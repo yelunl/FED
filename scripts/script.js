@@ -9,7 +9,7 @@ var halloweenImage = document.querySelector("header nav img");
 
 // https://www.youtube.com/watch?v=_OfaBRz9FQY
 // https://stackoverflow.com/questions/9419263/how-to-play-audio
-var audio = new Audio('../audio/horror_sound.mp3');
+var audio = new Audio('./audio/horror_sound.mp3');
 
 var body = document.querySelector("body");
 var header = document.querySelector("header");
@@ -20,10 +20,10 @@ function menuOpen() {
 }
 
 function halloweenTheme() {
-    if (halloweenImage.getAttribute('src') === "../images/image.png") {
-        halloweenImage.src = "../images/logo.svg";
+    if (halloweenImage.getAttribute('src') === "./images/image.png") {
+        halloweenImage.src = "./images/logo.svg";
     } else {
-        halloweenImage.src = "../images/image.png";
+        halloweenImage.src = "./images/image.png";
         audio.play();
     }
 
